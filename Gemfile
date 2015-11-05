@@ -4,7 +4,7 @@ if Gem::Version.new(Bundler::VERSION) < Gem::Version.new('1.5.0')
   abort "Redmine requires Bundler 1.5.0 or higher (you're using #{Bundler::VERSION}).\nPlease update with 'gem update bundler'."
 end
 
-gem "sqlite3"
+gem "pg"
 
 gem "rails", "4.2.4"
 gem "jquery-rails", "~> 3.1.4"
@@ -63,7 +63,6 @@ database_file = File.join(File.dirname(__FILE__), "config/database.yml")
 group :development do
   gem "rdoc", ">= 2.4.2"
   gem "yard"
-  gem "sqlite3"
 end
 
 group :test do
